@@ -22,7 +22,7 @@ public class RedisController {
 	
 	
 	@GetMapping()
-	public String findAll(){
+	public String helloWorld(){
 		
 		return "Hello World";
 	}
