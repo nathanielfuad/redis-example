@@ -20,6 +20,13 @@ public class RedisController {
 	@Autowired
 	private UserRepository userRepository;
 	
+	
+	@GetMapping()
+	public String findAll(){
+		
+		return "Hello World";
+	}
+	
 	@GetMapping("/users")
 	public Map<Object, Object> findAll(){
 		
