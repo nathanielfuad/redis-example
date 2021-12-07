@@ -3,6 +3,8 @@ package com.example.demo.controllers;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,14 +21,13 @@ import com.example.demo.repositorys.UserRepository;
 public class RedisController {
 	@Autowired
 	private UserRepository userRepository;
-	
-	
+
 	@GetMapping()
 	public String helloWorld(){
 		
 		return "Hello World";
 	}
-	
+
 	@GetMapping("/users")
 	public Map<Object, Object> findAll(){
 		
